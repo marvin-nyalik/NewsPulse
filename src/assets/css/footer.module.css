@@ -28,7 +28,11 @@
     margin-bottom: 0;
     border-top: 1px solid rgb(246, 241, 241);
     position: relative;
+<<<<<<< HEAD
     top: 5vh;
+=======
+    top: 15vh;
+>>>>>>> fbbc36e7172178a831bf62bd22c119a67ca4a497
     bottom: 0;
     left: 2.5vw;
     font-family: poppins, 'Arial';
@@ -41,9 +45,12 @@
 }
 }
 
+<<<<<<< HEAD
 @media screen and (min-width:1024px){
   .footer {
     top: 12vh;
   }
 }
 
+=======
+>>>>>>> fbbc36e7172178a831bf62bd22c119a67ca4a497

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
@@ -47,6 +48,12 @@ const NewsDetail = () => {
     </div>
     <Footer />
     </div>
+=======
+const NewsDetail = () => {
+  return(
+    <>
+    News Details
+>>>>>>> fbbc36e7172178a831bf62bd22c119a67ca4a497
     </>
   )
 }
