@@ -1,8 +1,14 @@
 .toolbar {
   width: 100vw;
   padding-top: 10px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-self: center;
+  background: white;
+  z-index: 9;
 }
-.cover{
+.cover {
   display: flex;
   flex-direction: column;
 }
@@ -37,6 +43,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 3vh;
   height: 5vh;
 }
 
@@ -51,6 +59,21 @@
 .lead {
   color: grey;
   font-size: 12px;
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lead input {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  height: 5vh;
+}
+
+.lead input::placeholder {
+  font-size: 10px;
+  font-style: italic;
+  font-family: poppins;
 }
 
 .slider {
@@ -72,7 +95,7 @@
 
 .slider::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .slider span {
   background: #fff;
@@ -83,9 +106,37 @@
   border-radius: 3px;
 }
 
+.newsslider {
+  height: 30vh;
+  width: 95vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+.newsslider::-webkit-scrollbar {
+  display: none;
+}
+.personalizedFeeds {
+  position: relative;
+  top: 100px;
+  width: 95vw;
+  margin: 10px auto;
+  margin-top: 30px;
+  font-family: poppins;
+}
+
 @media screen and (min-width: 768px){
   .toolbar {
     padding-top: 20px;
+  }
+
+  .personalizedFeeds {
+    width: 95vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: center;
+    flex-wrap: wrap;
   }
 
   .headline {
@@ -95,13 +146,19 @@
     margin-bottom: 8px;
   }
   .slider {
-    position: static;
+    position: relative;
+    top: 13vh;
     margin-top: 10px;
   }
   .date {
     width: 95vw;
+    position: relative;
+    top: 10vh;
     margin: 0 auto;
     flex-direction: row;
+  }
+  .lead input {
+    width: 30vw;
   }
   .bot {
     display: none;
