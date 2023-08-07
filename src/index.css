@@ -55,10 +55,28 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #fff;
+  }
+
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   a:hover {
