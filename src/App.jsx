@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { Suspense } from 'react';
-import Home from './components/Home';
+import Home from './components/Home.jsx';
 
 function App() {
   const NewsDetail = React.lazy(() => import('./components/NewsDetail.jsx'));

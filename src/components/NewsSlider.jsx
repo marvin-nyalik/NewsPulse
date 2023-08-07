@@ -29,8 +29,4 @@ const NewsSlider = () => {
   )
 }
 
-<<<<<<< HEAD
 export default NewsSlider;
-=======
-export default NewsSlider;
->>>>>>> fbbc36e7172178a831bf62bd22c119a67ca4a497
