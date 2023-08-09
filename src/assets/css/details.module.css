@@ -1,0 +1,195 @@
+.container {
+  width: 95vw;
+  height: auto;
+  margin: 20px auto;
+}
+
+.detail {
+  height: auto;
+}
+
+.coverImg {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  top: 2rem;
+}
+
+.coverImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.headerT {
+  background: rgb(249, 247, 247);
+  padding: 3px;
+  width: 30%;
+  border-radius: 5px;
+  font-family: poppins, 'Courier New', Courier, monospace;
+  color: #213547;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.msummary {
+  width: 95vw;
+  margin: 10px auto;
+  display: flex;
+  align-self: center;
+}
+
+.msummary p {
+  background: rgb(237, 233, 233);
+  font-size: 12px;
+  padding: 5px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 8px;
+  border-left: 2px solid #213547;
+  position: relative;
+  top: 30px;
+}
+
+.content {
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  top: 10px;
+  padding: 10px 5px;
+  padding-bottom: 20px;
+}
+
+.info {
+  position: relative;
+  top: 30px;
+  font-size: 10px;
+  width: 95vw;
+  margin: 5px auto;
+}
+
+.info span {
+  color: grey;
+  margin-left: 3%;
+  margin-right: 5px;
+}
+
+.head {
+  display: flex;
+  align-self: center;
+  margin: 0;
+}
+
+.title {
+  position: relative;
+  top: 30px;
+  width: 95vw;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.showcase {
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.desktopSummary {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .coverImg {
+    width: 50%;
+    height: 30vh;
+  }
+
+  .desktopSummary {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 8px;
+    height: auto;
+  }
+
+  .info {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .content {
+    font-size: 24px;
+    width: 95vw;
+    margin: 10px auto;
+    text-align: justify;
+  }
+
+  .detail {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .desktopSummary .summary {
+    background: rgb(237, 233, 233);
+    font-size: 12px;
+    padding: 5px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    border-left: 2px solid #213547;
+    position: relative;
+    top: 30px;
+  }
+
+  .msummary {
+    display: none;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .desktopSummary .summary p {
+    font-size: 15px;
+  }
+
+  .headerT {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .coverImg {
+    width: 50%;
+    height: 55vh;
+  }
+
+  .headerT {
+    font-size: 22px;
+  }
+
+  .desktopSummary .summary {
+    width: 70%;
+  }
+
+  .content p {
+    width: 80%;
+    text-align: justify;
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .desktopSummary .summary p {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .content {
+    width: 95vw;
+  }
+}
