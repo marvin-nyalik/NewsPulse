@@ -14,7 +14,7 @@ const NewsDetail = () => {
         <div className={css.coverImg}>
           <img src={avatar} alt="Avatar" />
           <Link to="/">
-          <p className={css.headerT}> <i class='bx bx-arrow-back'></i> <span>Ecstatic</span></p>
+          <p className={css.headerT}> <i className='bx bx-arrow-back' /> <span>Ecstatic</span></p>
           </Link>
         </div>
           <div className={css.desktopSummary}>

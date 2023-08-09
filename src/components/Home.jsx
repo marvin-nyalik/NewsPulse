@@ -34,6 +34,10 @@ const Home = () => {
         <span>ABCNews</span>
         <span>ESPN</span>
         <span>RealMadrid</span>
+        <span>Chelsea</span>
+        <span>AtleticoMadrid</span>
+        <span>NBA</span>
+        <span>Lebron</span>
     </div>
     <div>
     <NewsSlider />
