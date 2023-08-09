@@ -7,6 +7,7 @@
   align-self: center;
   background: white;
   z-index: 9;
+  margin-bottom: 10px;
 }
 
 .cover {
@@ -105,8 +106,14 @@
   margin: 0 10px;
   cursor: pointer;
   width: auto;
+  font-size: 10px;
   padding: 2px 4px;
   border-radius: 3px;
+  white-space: nowrap;
+}
+
+span a {
+  color: #213547;
 }
 
 .newsslider {
@@ -129,9 +136,42 @@
   font-family: poppins, 'Courier New', Courier, monospace;
 }
 
+.articleList {
+  width: 98vw;
+  margin: 20px auto;
+  position: relative;
+  top: 70px;
+  margin-bottom: 130px;
+  font-size: 12px;
+  border-left: 1px solid #213547;
+  border-radius: 8px;
+}
+
+.articleList a {
+  color: #213547;
+  margin-left: 5px;
+}
+
+.articleList h3 {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px auto;
+  margin-left: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .toolbar {
     padding-top: 20px;
+  }
+
+  .articleList {
+    font-size: 20px;
+    border-left: none;
+    margin-bottom: 30px;
+  }
+
+  .slider span {
+    font-size: 15px;
   }
 
   .personalizedFeeds {
