@@ -15,7 +15,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const [ query, setQuery ] = useState('');
   const initialQuery = 'technology';
-  const modArticles = [...articles].splice(80, 20);
+  const modArticles = [...articles].splice(-10);
   
   useEffect(() => {
     if(query) {
@@ -76,7 +76,7 @@ const Home = () => {
     </div>
     <div className={css.articleList}>
       <h3>Other Stories In This Category</h3> 
-      {modArticles.map(article => (<Link key={article.url} to={`/news/detail/${encodeURIComponent(article.url)}`}> <p>{article.title +' - '+ article.source.name}</p> </Link> ))}
+      {modArticles.map(article => (<Link key={article.url} className={css.artList} to={`/news/detail/${encodeURIComponent(article.url)}`}> <p>{article.title +' - '+ article.source.name}</p> </Link> ))}
     </div>
     <Footer />
   </>

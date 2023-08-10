@@ -1,16 +1,18 @@
 /* eslint-disable no-unused-vars */
 import css from '../assets/css/article.module.css';
 import PropTypes from 'prop-types';
+import avatar from '../assets/images/camera.jpg';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Article = React.memo(({ articles }) => {
   const secondArticles = useSelector((state) => state.articles.articles);
-  console.log('Articles from article component ', secondArticles);
+  const toDisplay = [...secondArticles].slice(2,52);
+  const noImage = ['ReadWrite', 'Google News'];
 
   return (
-    secondArticles.map(article => {
+    toDisplay.map(article => {
       const encodedTitle = encodeURIComponent(article.url);
       return (
         <Link to={`/news/detail/${encodedTitle}`} className={css.link} key={article.title}>
@@ -24,7 +26,7 @@ const Article = React.memo(({ articles }) => {
               </p>
             </div>
             <div className={css.image}>
-              <img src={article.urlToImage} alt='avatar' />
+              <img src={noImage.includes(article.source.name) ? avatar : article.urlToImage} alt='avatar' />
             </div>
           </div>
         </Link>
