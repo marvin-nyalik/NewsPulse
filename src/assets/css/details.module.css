@@ -193,14 +193,14 @@
 
   .desktopSummary .summary {
     background: rgb(237, 233, 233);
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px;
     width: 90%;
-    margin: 0 auto;
+    height: auto;
+    margin: auto auto;
     border-radius: 8px;
     border-left: 2px solid #213547;
     position: relative;
-    top: 30px;
   }
 
   .msummary {
@@ -220,11 +220,18 @@
     right: 40px;
     bottom: 30px;
   }
+
+  .showcase {
+    position: relative;
+    top: 40px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .coverImg {
     width: 50%;
+    position: relative;
+    top: 45px;
     height: 55vh;
   }
 
@@ -239,17 +246,19 @@
 
   .desktopSummary .summary {
     width: 70%;
+    position: relative;
+    top: 30px;
   }
 
   .content p {
     width: 90%;
     margin: 5px 0;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2;
   }
 
   .desktopSummary .summary p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .title {
@@ -260,5 +269,10 @@
 
   .content {
     width: 95vw;
+  }
+
+  .showcase {
+    position: relative;
+    top: 5px;
   }
 }
