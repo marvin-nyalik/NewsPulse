@@ -8,14 +8,14 @@ import { useSelector } from 'react-redux';
 
 const Article = React.memo(({ articles }) => {
   const secondArticles = useSelector((state) => state.articles.articles);
-  const toDisplay = [...secondArticles].slice(2,52);
+  const toDisplay = [...secondArticles].slice(2, 40);
   const noImage = ['ReadWrite', 'Google News'];
 
   return (
     toDisplay.map(article => {
       const encodedTitle = encodeURIComponent(article.url);
       return (
-        <Link to={`/news/detail/${encodedTitle}`} className={css.link} key={article.title}>
+        <Link to={`/news/detail/${encodedTitle}`} className={css.link} key={article.url}>
           <div className={css.container}>
             <div className={css.info}>
               <span className={css.tag}>{article.source.name}</span>
