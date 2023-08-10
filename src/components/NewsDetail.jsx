@@ -1,32 +1,41 @@
 import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import ReactDOM from 'react-dom';
 import css from '../assets/css/details.module.css';
 import avatar from '../assets/images/camera.jpg';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const NewsDetail = () => {
   const { title } = useParams();
+  const [showModal, setShowModal] = useState(false);
+  const [liked, setLiked] = useState(false);
   const articles = useSelector((state) => state.articles.articles);
   const thisArticle = articles.find(article => article.url === title);
+
+  const openModal = () => {
+    setShowModal(true);
+    setLiked(true);
+  };
+  
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
+  return ( thisArticle ? (
     <>
-    <div className={css.detail}>
+    <div className={css.detail} id='header'>
     <Header className={css.head}/>
     <div className={css.container}>
       <div className={css.showcase}>
         <div className={css.coverImg}>
-          <img src={thisArticle.urlToImage ? thisArticle.urlToImage : avatar} alt="Avatar" />
-          <Link to="/">
-          <p className={css.headerT}> <i className='bx bx-arrow-back' /> <span>Back</span></p>
-          </Link>
+        <img src={thisArticle.urlToImage ? thisArticle.urlToImage : avatar} alt='avatar' />
         </div>
           <div className={css.desktopSummary}>
           <div className={css.summary}>
@@ -39,7 +48,7 @@ const NewsDetail = () => {
         {thisArticle.title}
       </div>
       <div className={css.info}>
-        <p>By {thisArticle.author ? thisArticle.author : 'Anonymous'}<span><i className='bx bx-book-open' />Source: {thisArticle.source.name}</span> <span>{thisArticle.publishedAt.substring(0,10)}</span></p>
+        <p>By {thisArticle.author ? thisArticle.author : 'Anonymous'}<span><i className='bx bx-book-open' />Source: {thisArticle.source.name || ''}</span> <span>{thisArticle.publishedAt.substring(0,10)}</span></p>
       </div>
       <div className={css.msummary}>
       <p>{thisArticle.description}</p>
@@ -63,7 +72,36 @@ const NewsDetail = () => {
     </div>
     <Footer />
     </div>
-    </>
+    <div className={css.like}>
+      <i className='bx bxs-heart' onClick={openModal}   style={{ color: liked ? '#f230cb' : '#213547' }}
+/>
+      <Link to='/' className={css.backarrow}>
+        <i className='bx bx-arrow-back' />
+      </Link>
+    </div>
+    <div>
+      {showModal && (
+        ReactDOM.createPortal(
+          <div className="modal-overlay">
+            <div className="modal">
+              <p>Thank you for liking this story.</p>
+              <button onClick={closeModal}>Close</button>
+            </div>
+          </div>,
+          document.getElementById('portal')
+        )
+      )}
+    </div>
+    </>) : (
+      <div>
+        <Header />
+        <div className={css.error}>
+          You are not allowed to read this article due to the Tracking Prevention Policy..! <br/>
+          <Link to='/' className={css.backlink}> Back to Articles</Link>
+        </div>
+        <Footer />
+      </div>
+    )
   )
 }
 

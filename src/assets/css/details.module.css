@@ -6,13 +6,15 @@
 
 .detail {
   height: auto;
+  width: 99vw;
+  margin: 0 auto;
 }
 
 .coverImg {
   width: 100%;
   height: 30vh;
   position: relative;
-  top: 2rem;
+  top: 5px;
 }
 
 .coverImg img {
@@ -23,12 +25,12 @@
 .headerT {
   background: rgb(249, 247, 247);
   padding: 3px;
-  width: 30%;
+  width: 25%;
   border-radius: 5px;
   font-family: poppins, 'Courier New', Courier, monospace;
   color: #213547;
   position: absolute;
-  top: 10px;
+  bottom: 0;
   left: 10px;
 }
 
@@ -68,6 +70,21 @@
   margin: 5px auto;
 }
 
+.like {
+  color: #213547;
+  font-size: 18px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 5px;
+  bottom: 40px;
+  cursor: pointer;
+}
+
+.like i {
+  margin: 5px 0;
+}
+
 .info span {
   color: grey;
   margin-left: 3%;
@@ -99,10 +116,43 @@
   display: none;
 }
 
+.error {
+  width: 95vw;
+  height: 80vh;
+  font-size: 15px;
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backlink {
+  margin-top: 30px;
+}
+
+.backarrow {
+  color: #213547;
+  margin: 0;
+}
+
+.backarrow:hover {
+  color: brown;
+}
+
 @media screen and (min-width: 768px) {
   .head {
     position: relative;
     top: 70px;
+  }
+
+  .error {
+    font-size: 24px;
+    height: 70vh;
+    position: relative;
+    top: 10vh;
   }
 
   .title {
@@ -132,7 +182,7 @@
   .content {
     font-size: 18px;
     line-height: 2;
-    width: 95vw;
+    width: 92vw;
     margin: 10px auto;
   }
 
@@ -164,6 +214,12 @@
   .headerT {
     font-size: 18px;
   }
+
+  .like {
+    font-size: 32px;
+    right: 40px;
+    bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -172,8 +228,13 @@
     height: 55vh;
   }
 
+  .like {
+    font-size: 36px;
+  }
+
   .headerT {
     font-size: 22px;
+    width: 15%;
   }
 
   .desktopSummary .summary {
