@@ -34,7 +34,7 @@
 }
 
 .logoDiv:hover {
-  color: rgb(63, 177, 177);
+  color: brown;
 }
 
 .logoDiv i {
@@ -63,6 +63,7 @@
 .lead {
   color: grey;
   font-size: 12px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   width: 95vw;
   display: flex;
   justify-content: space-between;
@@ -152,6 +153,14 @@ span a {
   margin-left: 5px;
 }
 
+.artList {
+  margin: 0 auto;
+}
+
+.artList:hover {
+  color: brown;
+}
+
 .articleList h3 {
   font-family: poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -181,6 +190,14 @@ span a {
     align-items: flex-start;
     align-self: center;
     flex-wrap: wrap;
+  }
+
+  .lead {
+    font-size: 15px;
+  }
+
+  .lead input::placeholder {
+    font-size: 15px;
   }
 
   .headline {
