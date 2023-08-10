@@ -100,6 +100,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .head {
+    position: relative;
+    top: 70px;
+  }
+
+  .title {
+    position: relative;
+    font-size: 30px;
+    top: 40px;
+  }
+
   .coverImg {
     width: 50%;
     height: 30vh;
@@ -119,10 +130,10 @@
   }
 
   .content {
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 2;
     width: 95vw;
     margin: 10px auto;
-    text-align: justify;
   }
 
   .detail {
@@ -144,10 +155,6 @@
 
   .msummary {
     display: none;
-  }
-
-  .title {
-    font-size: 30px;
   }
 
   .desktopSummary .summary p {
@@ -174,10 +181,10 @@
   }
 
   .content p {
-    width: 80%;
-    text-align: justify;
+    width: 90%;
     margin: 5px 0;
     font-size: 20px;
+    line-height: 2;
   }
 
   .desktopSummary .summary p {
@@ -185,8 +192,9 @@
   }
 
   .title {
-    font-size: 32px;
-    margin-top: 20px;
+    font-size: 34px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   .content {
