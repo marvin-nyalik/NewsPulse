@@ -8,8 +8,9 @@ const initialState = {
 }
 
 export const fetchArticles = createAsyncThunk('articles/fetch', async (query) => {
-  const articles = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=a13632d1833f4bfbbe49b4ec53c7bc37`);
-  const toRender =  articles.data.articles.slice(0, 100);
+  console.log('Dispatched Action')
+  const articles = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=c6499c7b470d4f49a3b7956da8075c23`);
+  const toRender =  articles.data.articles.slice(0, 50);
   return toRender;
 });
 

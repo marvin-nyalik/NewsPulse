@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const fetchSources = createAsyncThunk('sources/fetch', async () => {
-  const sources = await axios.get('https://newsapi.org/v2/top-headlines/sources?apiKey=a13632d1833f4bfbbe49b4ec53c7bc37');
+  const sources = await axios.get('https://newsapi.org/v2/top-headlines/sources?apiKey=c6499c7b470d4f49a3b7956da8075c23');
   const sourceNames = sources.data.sources.map((source) => ({
     name: source.name,
     id: source.id,
