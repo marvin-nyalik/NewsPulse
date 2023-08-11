@@ -9,7 +9,7 @@ const Header = () => {
         <p>NewsPulse</p>
       </div>
       <div>
-        <i className='bx bxs-user-circle'></i>
+        <i className='bx bxs-user-circle' style={{'font-size': '24px'}}></i>
       </div>
     </div>
   </div>

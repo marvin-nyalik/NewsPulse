@@ -7,6 +7,7 @@
   align-self: center;
   background: white;
   z-index: 9;
+  margin-bottom: 10px;
 }
 
 .cover {
@@ -21,6 +22,8 @@
   margin-bottom: 5px;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 3px;
   height: 3vh;
 }
 
@@ -33,7 +36,7 @@
 }
 
 .logoDiv:hover {
-  color: rgb(63, 177, 177);
+  color: brown;
 }
 
 .logoDiv i {
@@ -46,7 +49,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 3vh;
+  top: 5.5vh;
   height: 5vh;
 }
 
@@ -62,6 +65,7 @@
 .lead {
   color: grey;
   font-size: 12px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   width: 95vw;
   display: flex;
   justify-content: space-between;
@@ -105,8 +109,14 @@
   margin: 0 10px;
   cursor: pointer;
   width: auto;
+  font-size: 10px;
   padding: 2px 4px;
   border-radius: 3px;
+  white-space: nowrap;
+}
+
+span a {
+  color: #213547;
 }
 
 .newsslider {
@@ -129,9 +139,50 @@
   font-family: poppins, 'Courier New', Courier, monospace;
 }
 
+.articleList {
+  width: 98vw;
+  margin: 20px auto;
+  position: relative;
+  top: 70px;
+  margin-bottom: 130px;
+  font-size: 12px;
+  border-left: 1px solid #213547;
+  border-radius: 8px;
+}
+
+.articleList a {
+  color: #213547;
+  margin-left: 5px;
+}
+
+.artList {
+  margin: 0 auto;
+}
+
+.artList:hover {
+  color: brown;
+}
+
+.articleList h3 {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px auto;
+  margin-left: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .toolbar {
     padding-top: 20px;
+  }
+
+  .articleList {
+    font-size: 20px;
+    border-left: none;
+    margin-bottom: 30px;
+  }
+
+  .slider span {
+    font-size: 15px;
   }
 
   .personalizedFeeds {
@@ -143,10 +194,17 @@
     flex-wrap: wrap;
   }
 
+  .lead {
+    font-size: 15px;
+  }
+
+  .lead input::placeholder {
+    font-size: 15px;
+  }
+
   .headline {
     height: 5vh;
     font-size: 20px;
-    border-bottom: 1px solid lightgrey;
     margin-bottom: 8px;
   }
 

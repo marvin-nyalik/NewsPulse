@@ -1,12 +1,13 @@
 .container {
-  width: 95vw;
+  width: 98vw;
   height: 7vh;
   margin: 10px auto;
   margin-bottom: 0;
   border-top: 1px solid rgb(246, 241, 241);
   position: fixed;
+  font-size: 18px;
   bottom: 0;
-  left: 2.5vw;
+  left: 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,5 +46,9 @@
 @media screen and (min-width: 1024px) {
   .footer {
     top: 13vh;
+  }
+
+  .footer a i {
+    color: #213547;
   }
 }
