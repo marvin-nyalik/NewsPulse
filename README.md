@@ -55,6 +55,8 @@ This project is built with React, JavaScript and Redux.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+Due to NewsAPI restrictions on production environments, this project can't be served from a live link.
+
 # News Pulse
 NewsPulse is a digital platform that provides up-to-date and relevant information on current events, developments, and stories from around the world.
 <a name="readme-top"></a>
