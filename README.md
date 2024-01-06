@@ -55,7 +55,7 @@ This project is built with React, JavaScript, and Redux.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-Due to NewsAPI restrictions on production environments, this project can't be served from a live link. A video demonstration of how the app works can be seen <a href="https://www.loom.com/share/dc169573423c4371b0b28db94023b9e9?sid=52383f08-35d3-4547-93b0-54ef23cbe417">in this Loom video</a>.
+Due to NewsAPI restrictions on production environments, this project can't be served from a live link. A video demonstration of how the app works will be provided.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.
