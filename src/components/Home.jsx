@@ -1,7 +1,6 @@
 import css from '../assets/css/home.module.css';
 import Header from './Header';
 import NewsSlider from './NewsSlider';
-import Loading from './Loading';
 import Footer from './Footer';
 import React, {Suspense} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,20 +18,16 @@ const Home = () => {
   const initialQuery = 'technology';
   
   useEffect(() => {
-    if(articles.length === 0){
-    dispatch(fetchArticles(initialQuery));
-  }
-  }
-  ,[articles.length]);
-
-  const modArticles = [...articles].slice(-10);
-
-  useEffect(() => {
+    if (articles.length === 0) {
+      dispatch(fetchArticles(initialQuery));
+    }
     if(sources.length === 0){
       dispatch(fetchSources());
     }
-  },
-  [sources.length]);
+  }
+  ,[articles.length, sources.length]);
+
+  const modArticles = [...articles].slice(-10);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,8 +40,7 @@ const Home = () => {
   if (loading) {
     return(
       <>
-      <div>Loading</div>
-      <Loading />
+        <div>Loading</div>
       </>
     )
   }
@@ -54,24 +48,24 @@ const Home = () => {
   return (
     <>
     <div className={css.cover} id="header">
-    <Header />
-    <div className={css.date}>
-      <div className={css.lead}>{date} 
-        <span>
-          <form onSubmit={handleSubmit}>
-          <input type="text"  placeholder='Search keyword & Press Enter..'
-           name="query" ref={queryRef} />
-          </form>
-          </span>
+      <Header />
+      <div className={css.date}>
+        <div className={css.lead}>{date} 
+          <span>
+            <form onSubmit={handleSubmit}>
+            <input type="text"  placeholder='Search keyword & Press Enter..'
+            name="query" ref={queryRef} />
+            </form>
+            </span>
+        </div>
+        <p className={css.bot}>Where News Lives!</p>
       </div>
-      <p className={css.bot}>Where News Lives!</p>
-    </div>
-    <div className={css.slider}>
-      { sources.map(source => (<span key={source.id}> <a href={source.url}>{source.name}</a> </span>))}
-    </div>
-    <div>
-    <NewsSlider />
-    </div>
+      <div className={css.slider}>
+        { sources.map(source => (<span key={source.id}> <a href={source.url}>{source.name}</a> </span>))}
+      </div>
+      <div>
+        <NewsSlider />
+      </div>
     </div>
     <div className={css.personalizedFeeds}>
       <Suspense fallback={<div>...</div>}>
