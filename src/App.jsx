@@ -9,8 +9,8 @@ function App() {
      <Router>
        <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/news/detail/:title' 
-          element={<Suspense fallback={<div>Loading...</div>}><NewsDetail /></Suspense>} />
+        <Route path='/news/detail/:title'
+          element={<Suspense fallback ={<div> Loading ... </div>}> <NewsDetail /> </Suspense> } />
        </Routes> 
      </Router>
   )
