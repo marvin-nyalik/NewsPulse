@@ -5,7 +5,7 @@ import Footer from './Footer';
 import React, {Suspense} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useRef } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchArticles } from '../redux/articles/articleSlice';
 import { fetchSources } from '../redux/sources/sourceSlice';
 
