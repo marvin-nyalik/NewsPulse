@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import Home from './components/Home.jsx';
